@@ -14,14 +14,17 @@ while (isSunk == false) {
 		prompt('The value you entered is not valid. Please enter a number from 0-6:');
 	} else {
 		guesses += 1;
-		if (hits == 3) {
-			isSunk = true;
-			alert('You sank my battleship!');
+		if (guess == location1 || guess == location2 || guess == location3) {
+			alert('Hit!');
+			hits += 1;
+			if (hits == 3) {
+				isSunk = true;
+				alert('You sank my battleship!');
+			}
+		} else {
+			alert('Miss!');
 		}
 	}
-
-	
-hits += 1;
 }
-//var message = "You have guessed " + guesses + " times.";
-//message += "You have " + hits " hits.";
+var message = "You took " + guesses + " guesses to sink my battleship.";
+alert(message);
