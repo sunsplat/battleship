@@ -11,10 +11,10 @@ function play() {
 
 	while (isSunk == false) {
 		// prompts save values as strings
-		guess = prompt('Please enter a number from 0-6:');
+		guess = console.log('Please enter a number from 0-6:');
 		guess = parseInt(guess);
 		if (guess > 6 || guess < 0 || Number.isInteger(guess) != true) {
-			prompt('The value you entered is not valid. Please enter a number from 0-6:');
+			console.log('The value you entered is not valid. Please enter a number from 0-6:');
 		} else {
 			guesses += 1;
 			if (guess == location1 || guess == location2 || guess == location3) {
